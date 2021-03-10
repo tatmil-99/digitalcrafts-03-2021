@@ -8,7 +8,10 @@ variableName = True
 
 greeting = 'My name is Tate'
 
+aList = ['students', 23, True] 
+
 
 print('Hello World') 
 print(greeting) 
 print(sumOfNumbers)
+print(aList)
