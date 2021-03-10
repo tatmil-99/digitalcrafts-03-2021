@@ -35,4 +35,3 @@ while (lenFriendsLastName < 1):
 friendsFullName = friendsFirstName + " " + friendsLastName
 
 print("%s is friends with %s " % (myFullName, friendsFullName))
-
