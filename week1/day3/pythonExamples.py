@@ -6,5 +6,9 @@ sumOfNumbers = 1 + 1
 
 variableName = True
 
+greeting = 'My name is Tate'
+
 
 print('Hello World') 
+print(greeting) 
+print(sumOfNumbers)
