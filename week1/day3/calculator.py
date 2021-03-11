@@ -18,15 +18,17 @@ def divide(num1, num2):
 # Depending upon the operator put in by user, the conditions run the correlating function
 # and prints result. 
 if arg2 == "+":
-  print("Result = %s" % (add(arg1, arg3)))    
+  # print("Result = %s" % (add(arg1, arg3)))
+  print("Result =", add(arg1, arg3))    
 elif arg2 == "-":
-  print("Result = %s" % (subtract(arg1, arg3)))    
+  print("Result =", subtract(arg1, arg3)) 
 elif arg2 == "*":
-  print("Result = %s" % (multiply(arg1, arg3)))    
+  print("Result =", multiply(arg1, arg3))
 elif arg2 == "/":
-  print("Result = %s" % (divide(arg1, arg3))) 
+  print("Result =", divide(arg1, arg3))
 else:
-  print("Operator not accepted")    
+  print("Operator not accepted")   
+
 
 
 
