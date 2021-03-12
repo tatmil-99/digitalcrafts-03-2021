@@ -11,6 +11,6 @@ def sumOfMultiples():
       num += 1
   return(total) 
     
-    
-
 print(sumOfMultiples())
+
+
