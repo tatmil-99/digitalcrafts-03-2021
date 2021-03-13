@@ -1,5 +1,9 @@
+tasks = []
+# titlePriority = {}
+
 def menuMessage():
-  message = """To Do List:
+  message = """
+  To Do List:
   -----------
   press 1 to add task: \n
   press 2 to delete task: \n
@@ -8,31 +12,34 @@ def menuMessage():
   """ 
   return print(message)
 
-tasks = []
-titlePriority = {}
-
 def addTask():
-  if keyPressed == "1":
-    title = input("What is the task? ")
-    priority = input("What is the priority level(high, medium, low)? ")
+  titlePriority = {}
+  title = input("What is the task? ")
+  priority = input("What is the priority level(high, medium, low)? ")
 
-    titlePriority["title"] = title
-    titlePriority["priority"] = priority
+  titlePriority["title"] = title
+  titlePriority["priority"] = priority
 
-    tasks.append(titlePriority)
-  
+  tasks.append(titlePriority)
 
-keyPressed = "" 
+def delTask():
+  print(tasks)
+  toDelete = int(input("What task would you like to delete? "))
+  taskDeleted = tasks.pop(toDelete - 1) 
+  print("tasks left: %s" % tasks) 
 
-while keyPressed != "q":
+choice = "" 
+
+while choice != "q":
   menuMessage() 
   keyPressed = input("Select choice here: ")
-  addTask() 
+  if keyPressed == "1":
+    addTask()
+  elif keyPressed == "2":
+    delTask() 
+  choice = keyPressed
 
-  
 # print(titlePriority)
-print(tasks) 
-sdfsdffsd
 
 
 
