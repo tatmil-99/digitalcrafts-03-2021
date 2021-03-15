@@ -30,6 +30,8 @@ def delTask():
 
 def viewTask():
   counter = 1
+  print("all tasks:")
+  print("----------")
   for task in tasks: 
     toDo = print("%s - %s - %s" %(counter, task["title"], task["priority"]))
     counter += 1
