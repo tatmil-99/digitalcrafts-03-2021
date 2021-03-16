@@ -8,7 +8,6 @@ class User:
   def __init__(self, name, age):
     self.name = name
     self.age = age 
-    self.user = "user"
   
   def printUser(self):
     print(self.name)
@@ -17,7 +16,6 @@ class User:
 class TempUser:
   def __init__(self, name):
     self.name = name
-    self.temporary = "temporary" 
 
   def printTemp(self):
     print(self.name)
@@ -29,19 +27,18 @@ temporary = TempUser("Max")
 temporary.printTemp()
 
 def createUser():
-  user = " "
   userName = input("What is your name?")
   userAge = int(input("What is your age?"))
-  userType = input("Are you a \"user\" or \"temporary\" user?")
-  if userType == "temporary":
-    user = TempUser(userName)
-    user.printTemp()
-  elif userType == "user":
+  userType = input("Are you a \"user\" or \"temp\" user?")
+  if userType == "user":
     user = User(userName, userAge)
     user.printUser()
-
+  elif userType == "temp":
+    user = TempUser(userName)
+    user.printTemp()
   else:
     pass
+
 createUser()
   
  
