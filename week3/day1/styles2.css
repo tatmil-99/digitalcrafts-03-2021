@@ -1,0 +1,22 @@
+.header {
+  overflow: auto;
+  background-color: darkgray;
+}
+
+.nav_menu {
+  list-style-type: none;
+  float: right;
+  margin: 0;
+  padding: 12px;
+  font-size: 23px;
+}
+
+.nav_menu > li {
+  float: left;
+  padding-right: 12px;
+}
+
+.title {
+  font-weight: 600;
+  padding-left: 12px;
+}
