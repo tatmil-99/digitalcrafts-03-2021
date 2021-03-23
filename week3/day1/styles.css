@@ -1,0 +1,20 @@
+body {
+  background-color: rgb(213, 154, 213);
+}
+
+.form {
+  background-color: rgb(26, 220, 155);
+  font-family: monospace;
+  font-size: medium;
+}
+
+.field_theme {
+  background-color: chartreuse;
+  font-size: medium;
+  font-family: monospace;
+}
+
+.legend_font {
+  font-size: large;
+  font-family: monospace;
+}

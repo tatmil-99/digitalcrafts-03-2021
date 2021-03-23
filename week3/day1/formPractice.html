@@ -5,37 +5,38 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Document</title>
+  <link rel="stylesheet" href="styles.css">
 </head>
 <body>
   <form>
-    <fieldset>
-      <legend>Form 1</legend>
+    <fieldset class="field_theme">
+      <legend class="legend_font">Form 1</legend>
       <label for="inputText">Input Text Here:</label>
       <input type="text" name ="inputText" placeholder="type here...">
     </fieldset>
 
-    <fieldset>
-      <legend>Form 2</legend>
-      <div style="background-color: bisque;">
+    <fieldset class="field_theme">
+      <legend class="legend_font">Form 2</legend>
+      <div class="form">
         <label for="option1">question 1</label>
         <input type="radio" name="option1-3">
       </div>
       <hr>
 
-      <div style="background-color: turquoise;">
+      <div class="form">
         <label for="option2">question 2</label>
         <input type="radio" name="option1-3">
       </div>
       <hr>
 
-      <div style="background-color: bisque;">
+      <div class="form">
         <label for="option3">question 3</label>
         <input type="radio" name="option1-3">
       </div>
-    </fieldset>
+    </fieldset class="field_theme">
 
-    <fieldset>
-      <legend>Form 3</legend>
+    <fieldset class="field_theme"> 
+      <legend class="legend_font">Form 3</legend>
       <label for="dropdown">Select a Fruit:</label>
       <select name="dropdown">
         <option value="apple">apple</option>
