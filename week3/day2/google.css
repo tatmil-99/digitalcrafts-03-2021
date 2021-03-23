@@ -1,0 +1,16 @@
+body {
+  margin: 0;
+}
+
+#main {
+  margin-top: 40px;
+}
+
+#logo_container {
+  text-align: center;
+}
+
+.logo {
+  height: 250px;
+  width: 350px;
+}
