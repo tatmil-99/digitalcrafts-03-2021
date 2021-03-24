@@ -1,0 +1,16 @@
+.navbar {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  overflow: hidden;
+  background-color: teal;
+  height: 50px;
+}
+
+.navbar a {
+  color: white;
+  text-decoration: none;
+  padding-left: 15px;
+  padding-right: 25px;
+}
