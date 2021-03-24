@@ -3,14 +3,45 @@ body {
 }
 
 #main {
-  margin-top: 40px;
+  margin-top: 50px;
 }
 
 #logo_container {
   text-align: center;
 }
 
-.logo {
+#logo {
   height: 250px;
   width: 350px;
+}
+
+#searchbar_container {
+  text-align: center;
+}
+
+#searchbar {
+  padding-top: 12px;
+  padding-bottom: 12px;
+  outline: 0;
+  width: 550px;
+  border-radius: 20px;
+  border: 1.5px solid rgb(177, 172, 172);
+}
+
+#buttons {
+  display: flex;
+  justify-content: center;
+  margin-top: 25px;
+}
+
+.button {
+  marign-right: 12px;
+  margin-left: 12px;
+  padding: 10px 5px;
+  cursor: pointer;
+  background-color: rgb(235, 234, 234);
+  font-size: 16px;
+  font-family: initial;
+  color: rgb(63, 63, 63);
+  border-radius: 5px;
 }
