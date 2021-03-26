@@ -1,3 +1,8 @@
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+    Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+}
+
 .container {
   display: grid;
   height: 100vh;
@@ -19,25 +24,61 @@
   justify-content: flex-start;
   padding-left: 15px;
   font-size: 35px;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
-    Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  /* font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+    Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif; */
   border-radius: 10px;
+  box-shadow: 10px 15px 10px slategray;
 }
 
 .nav {
   grid-area: nav;
   background-color: mediumseagreen;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
   border-radius: 10px;
+  box-shadow: 10px 15px 10px slategray;
+  font-size: 32px;
+  font-weight: 600;
+  text-shadow: 1.5px 1.5px 1.5px rgb(39, 38, 40);
+}
+
+.nav a {
+  text-decoration: none;
+  padding-left: 18px;
+  padding-right: 18px;
 }
 
 .content {
   grid-area: main;
   background-color: lightgrey;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  padding-left: 15px;
+  padding-right: 15px;
+  font-size: 28px;
+  font-weight: 300;
+  word-spacing: 10px;
   border-radius: 10px;
+  box-shadow: 10px 15px 10px slategray;
 }
 
 .footer {
   grid-area: footer;
   background-color: lightskyblue;
   border-radius: 10px;
+  box-shadow: 10px 15px 10px slategray;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  font-size: 32px;
+  font-weight: 600;
+  text-shadow: 1.5px 1.5px 1.5px rgb(39, 38, 40);
+}
+
+.footer a {
+  text-decoration: none;
+  padding-left: 18px;
+  padding-right: 18px;
 }
