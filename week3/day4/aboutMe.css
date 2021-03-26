@@ -1,0 +1,43 @@
+.container {
+  display: grid;
+  height: 100vh;
+  grid-template-columns: 1fr 1.5fr;
+  grid-template-rows: 1fr 0.5fr 2fr 0.5fr;
+  grid-template-areas:
+    "h1 h1"
+    "nav nav"
+    ". main"
+    "footer footer";
+  grid-gap: 0.3rem;
+}
+
+.title {
+  grid-area: h1;
+  background-color: mediumpurple;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  padding-left: 15px;
+  font-size: 35px;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+    Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  border-radius: 10px;
+}
+
+.nav {
+  grid-area: nav;
+  background-color: mediumseagreen;
+  border-radius: 10px;
+}
+
+.content {
+  grid-area: main;
+  background-color: lightgrey;
+  border-radius: 10px;
+}
+
+.footer {
+  grid-area: footer;
+  background-color: lightskyblue;
+  border-radius: 10px;
+}
