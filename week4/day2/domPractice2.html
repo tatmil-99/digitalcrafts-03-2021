@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <div class="main-container">
+    <h1 class="header">Dom Practice 2</h1>
+    <label for="number">Number2</label>
+    <input class="input" name="number">
+    <button onclick="displayValue()">Submit</button>
+    <h3>Your Number is:</h3>
+    <p class="displayNumber"></p>
+  </div>
+</body>
+<script>
+  function displayValue() {
+    const numberEntered = document.querySelector(".input").value
+    // setTimeout(console.log(displayNumber), 3000)
+    console.log(numberEntered)
+    
+  }
+  
+</script>
+</html>
