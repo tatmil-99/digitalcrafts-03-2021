@@ -1,0 +1,41 @@
+<!-- #Add a Heading
+Select the h1 tag and set "Toppings" as the text of the heading. -done
+
+#Add Class
+Select the list item 'burger'. Add a class of 'list-item'. -done
+
+#Create and Append
+Create a new li element and append it to the list. --> 
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <h1 id="heading">Toppings</h1>
+  <ul id="list">
+    <li id="lettuce" class="green list-item">Lettuce</li>
+    <li id="tomato" class="red list-item">Tomato</li>
+    <li id="cheese" class="yellow list-item">Cheese</li>
+    <li id="burger">Burger</li>
+  </ul>
+
+  <script>
+    let header = document.getElementsByTagName("h1");
+    header.innerText = "Toppings";
+
+    let burgerListItem = document.getElementById("burger");
+    burgerListItem.className = "list-item";
+
+    let newElement = document.createElement('li');
+    let toAppend = document.getElementById("list");
+    toAppend.append(newElement);
+  </script>
+</body>
+</html>
