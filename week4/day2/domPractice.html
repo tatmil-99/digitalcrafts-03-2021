@@ -1,0 +1,44 @@
+<!-- create a div with a class name of main-container
+
+create an unordered list with 5 list items on it
+
+  all the list items are created using javascript
+
+create an input field
+
+create a radio input field using javascript
+
+append all create stuff to the div -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body id="root">
+  
+</body>
+<script>
+  const root = document.getElementById("root")
+
+  const divElement = document.createElement("div")
+  divElement.className = "main-container"
+
+  const ulList = document.createElement("ul")
+  const listItemOne = document.createElement('li')
+  const listItemTwo = document.createElement('li')
+  const listItemThree = document.createElement('li')
+  const listItemFour = document.createElement('li')
+  const listItemFive = document.createElement('li')
+
+  const inputElement = document.createElement("input")
+  const inputElement2 = document.createElement("input")
+  inputElement2.type = "radio"
+
+  ulList.append(listItemOne, listItemTwo, listItemThree, listItemFour, listItemFive)
+  divElement.append(ulList, inputElement, inputElement2)
+  root.append(divElement)
+</script>
+</html>
