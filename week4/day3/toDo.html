@@ -15,9 +15,7 @@
       <h1>To-Do List:</h1>
 
       <!-- insert later after button -->
-      <!-- <ul class="main-list">
-
-      </ul> -->
+      
     </div>
   </div>  
 </body>
@@ -25,7 +23,7 @@
   const taskLabel = document.createElement("label")
   taskLabel.className = "task-label"
   taskLabel.for = "task"
-  taskLabel.innerHTML = "Add Task:";
+  // taskLabel.innerHTML = "Add Task:";
   const createLabel = document.querySelector(".card")
   createLabel.append(taskLabel)
 
@@ -36,9 +34,19 @@
   createInput.append(taskInput)
 
   const addTaskBtn = document.createElement("button")
+  addTaskBtn.innerHTML = "Add Task"
   addTaskBtn.className = "task-button"
   const createBtn = document.querySelector(".card")
   createBtn.append(addTaskBtn)
+
+  const tasksTitle = document.createElement("h3")
+  tasksTitle.innerHTML = "Tasks:"
+  const tasksList = document.createElement("ul")
+  const createTasksTitle = document.querySelector(".card")
+  createTasksTitle.append(tasksTitle)
+  const createTasksList = document.querySelector(".card")
+  createTasksList.append(tasksList)
+
 
   // const addTaskVal = document.querySelector(".main-container").value
 </script>
