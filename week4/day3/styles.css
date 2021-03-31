@@ -1,0 +1,25 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  background-color: rgb(0, 255, 208);
+  height: 100vh;
+  justify-content: center;
+}
+
+.card {
+  /* width: 50vw; */
+  /* text-align: center; */
+  background-color: cadetblue;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  /* justify-content: center; */
+}
+
+button {
+  padding: 10px;
+  font-size: 1rem;
+  width: 10rem;
+  margin-top: 10px;
+  border-radius: 5px;
+}
