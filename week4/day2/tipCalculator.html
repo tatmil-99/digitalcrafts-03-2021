@@ -1,0 +1,35 @@
+<!-- practice remodeling the structure and style of the page -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tip Calculator</title>
+  <link rel="stylesheet" href="tipCalculator.css">
+</head>
+
+<body>
+  <div id="main">
+    <h2 id="title">Tip Calculator</h2>
+
+      <div id="inputSection">
+        <label id="top-label" for="billNum">Bill Amount($)</label>
+        <input id="bill-amt" type="text" name="billNum" placeholder="20">
+        <br>
+        <label id="bottom-label" for="tipNum">Tip Amount(%)</label>
+        <input id="tip-amt" type="text" name="tipNum" placeholder="20">
+        <div id="submit-btn">
+          <button onclick="tipFunction()">Calculate Total</button>
+        </div>
+      </div>
+
+      <div id="tipInfo">
+        <p id="display-total">Your total amount is:</p>
+        <p id="tip-history-title">Tip History:</p>
+        <ul id="tip-history">
+        </ul>
+      </div>
+  </div>
+</body>
+</html>
