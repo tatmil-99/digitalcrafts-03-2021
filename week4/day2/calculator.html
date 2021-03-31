@@ -9,19 +9,6 @@
 </head>
 
 <body>
-  <!-- Create a tip calculator using HTML, CSS and Javascript
-
-  A Person should be able to enter in the total amount of their bill, a percentage they want to tip, and be able to calculate the tip total
-
-  You must use CSS grid, Bootstrap or Flexbox
-
-  You need to have some styling on the calculator.
-
-  Display the tip amount (aka if the bill is $20 and they tip 20%, you would display $4.00) in a list that continues to grow as you add a new tip calc
-
-  - TIP
-  - $1.20
-  - $2.40 -->
   <div id="main-container">
     <div id="main">
       <h2 id="title">Tip Calculator</h2>
@@ -35,7 +22,11 @@
       <div id="button-box">
         <button onclick="tipFunction()">Calculate Total</button>
       </div>
-      <p id="display-total">Your total amount is: </p>
+      <p id="display-total">Your total amount is:</p>
+      <p id="tip-history-title">Tip History:</p>
+      <ul id="tip-history">
+
+      </ul>
     </div>
   </div>
 </body>
@@ -48,10 +39,15 @@
  
 
     const tipOperation = billAmt * (tipAmt / 100)
-    const totalAmt = Number(billAmt) + Number(tipOperation)
-    
+    let totalAmt = Number(billAmt) + Number(tipOperation)
+    totalAmt = totalAmt.toFixed(2)
 
-    paragraph.append(`$${totalAmt}`)
+    paragraph.innerText = (`Your total amount is: $${totalAmt}`)
+
+    const tipHistoryList = document.querySelector("#tip-history")
+    const newLiItem = document.createElement("li")
+    newLiItem.innerText = `$${tipOperation}`
+    tipHistoryList.append(newLiItem)
   }
 </script>
 </html>
