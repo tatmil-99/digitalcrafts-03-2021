@@ -10,6 +10,10 @@ body {
     Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
 }
 
+.title {
+  text-decoration: underline;
+}
+
 .main-container {
   display: flex;
   flex-direction: column;
@@ -45,9 +49,31 @@ body {
   font-size: 20px;
 }
 
+.task-input:hover {
+  box-shadow: 3px 4px 3px rgb(162, 165, 169);
+}
+
 .task-button {
   padding: 10px;
   margin: 10px;
   width: 125px;
   font-size: 20px;
+  border: none;
 }
+
+.task-button:hover {
+  box-shadow: 3px 4px 3px rgb(162, 165, 169);
+}
+
+.task-button:focus {
+  outline: 0;
+}
+
+.task-button:active {
+  box-shadow: 1px 2px 3px rgb(84, 85, 87);
+  border: none;
+}
+
+/* li {
+  list-style-type: none;
+} */
