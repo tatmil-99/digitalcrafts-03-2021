@@ -20,34 +20,54 @@
   </div>  
 </body>
 <script>
+  // CREATES INPUT AND LABEL
   const taskLabel = document.createElement("label")
   taskLabel.className = "task-label"
-  taskLabel.for = "task"
-  // taskLabel.innerHTML = "Add Task:";
+    // taskLabel.for = "task"
+    // taskLabel.innerHTML = "Add Task:";
   const createLabel = document.querySelector(".card")
   createLabel.append(taskLabel)
 
   const taskInput = document.createElement("input")
   taskInput.className = "task-input"
-  taskInput.name = "task"
+    // taskInput.name = "task"
   const createInput = document.querySelector(".card")
   createInput.append(taskInput)
+  const taskInputed = document.querySelector(".task-input").value
 
+  // CREATES BUTTON TO ADD TASKS
   const addTaskBtn = document.createElement("button")
   addTaskBtn.innerHTML = "Add Task"
   addTaskBtn.className = "task-button"
   const createBtn = document.querySelector(".card")
   createBtn.append(addTaskBtn)
 
+  // CREATES TITLE AND UL OF TASKS TO BE ADDED
   const tasksTitle = document.createElement("h3")
   tasksTitle.innerHTML = "Tasks:"
-  const tasksList = document.createElement("ul")
   const createTasksTitle = document.querySelector(".card")
   createTasksTitle.append(tasksTitle)
+
+  const tasksList = document.createElement("ul")
+  tasksList.className = "list-of-tasks"
   const createTasksList = document.querySelector(".card")
   createTasksList.append(tasksList)
 
+  // CREATES FUNCTION THAT CREATES NEW TASKS BASED ON USER INPUT
+  function addTask() {
+    const grabTask = document.querySelector(".list-of-tasks")
+    const newTask = document.createElement("li")
+    const taskInputed = document.querySelector(".task-input").value
+    newTask.innerHTML = taskInputed
+    grabTask.append(newTask) 
+  }
 
-  // const addTaskVal = document.querySelector(".main-container").value
+  
+  const onClick = document.querySelector(".task-button")
+
+  onClick.addEventListener("click", function() {
+    console.log("works")
+    addTask()
+  })
 </script>
 </html>
