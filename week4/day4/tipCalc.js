@@ -17,19 +17,18 @@ function tipFunction() {
 
 const form = document.querySelector("form");
 
-const validateNum = (num1, num2) => {
+const validateNum = (num) => {
   const numRegex = /[0-9]+$/;
-  return numRegex.test(num1, num2);
+  return numRegex.test(num);
 };
 
 form.addEventListener("submit", (event) => {
   const formInput1 = document.querySelector("#bill-amt").value;
   const formInput2 = document.querySelector("#tip-amt").value;
-  if (!validateNum(formInput1, formInput2)) {
-    event.preventDefault();
+  if (!validateNum(formInput1) || !validateNum(formInput2)) {
     alert("Please enter a valid number");
   } else {
+    event.preventDefault();
     tipFunction();
-    console.log("made it here")
-  };
+  }; 
 });
