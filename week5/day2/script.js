@@ -1,7 +1,15 @@
 // GET PEOPLE FUNCTION
-const main = document.querySelector(".main");
+// const body = document.querySelector(".main-container");
+// const main = document.createElement("main");
+// main.className = "main";
+// body.append(main);
 
 const fetchPeopleData = async () => {
+  const body = document.querySelector(".main-container");
+  const main = document.createElement("main");
+  main.className = "main";
+  body.append(main);
+
   let response = await fetch("https://fakerapi.it/api/v1/persons?_quantity=30");
   let json = await response.json();
   console.log(json);
@@ -37,10 +45,18 @@ submit.addEventListener("click", (event) => {
 
 
 // GET PLACES FUNCTION
-const main = document.querySelector(".main");
+// const body2 = document.querySelector(".main-container");
+// const main2 = document.createElement("main");
+// main2.className = "main2";
+// body2.append(main2);
 
 const fetchPlacesData = async () => {
-  let response = await fetch("https://fakerapi.it/api/v1/places?_quantity=1");
+  const body2 = document.querySelector(".main-container");
+  const main2 = document.createElement("main");
+  main2.className = "main2";
+  body2.append(main2);
+
+  let response = await fetch("https://fakerapi.it/api/v1/places?_quantity=30");
   let json = await response.json();
   console.log(json);
   for (let info of json.data) {
@@ -51,7 +67,7 @@ const fetchPlacesData = async () => {
     const container = document.createElement("div");
     container.className = "container";
     card.append(container);
-    main.append(card);
+    main2.append(card);
 
     const name = document.createElement("h4");
     name.innerHTML = "Latitude and Longitude:";
@@ -75,7 +91,7 @@ const fetchPlacesData = async () => {
 };
 
 
-const submit = document.querySelector(".get-places-btn");
-submit.addEventListener("click", (event) => {
+const submit2 = document.querySelector(".get-places-btn");
+submit2.addEventListener("click", (event) => {
   fetchPlacesData();
 });
