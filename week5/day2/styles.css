@@ -10,7 +10,7 @@ body {
   /* background-color: rgb(216, 202, 249); */
   background-size: cover;
   background-position: center;
-  background-color: whitesmoke;
+  background-color: rgb(210, 210, 210);
 }
 
 .main-container {
@@ -47,6 +47,9 @@ body {
 .card {
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
   transition: 0.3s;
+  padding: 15px 10px;
+  margin: 15px 10px;
+  background-color: rgb(228, 228, 228);
 }
 
 .card:hover {
@@ -59,4 +62,20 @@ body {
 
 .container ul {
   list-style-type: none;
+}
+
+.latitude-ul {
+  font-weight: 500;
+}
+
+.latitude-li {
+  font-weight: 300;
+}
+
+.longitude-ul {
+  font-weight: 500;
+}
+
+.longitude-li {
+  font-weight: 300;
 }
