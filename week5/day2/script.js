@@ -1,8 +1,4 @@
 // GET PEOPLE FUNCTION
-// const body = document.querySelector(".main-container");
-// const main = document.createElement("main");
-// main.className = "main";
-// body.append(main);
 
 const fetchPeopleData = async () => {
   const body = document.querySelector(".main-container");
@@ -14,10 +10,6 @@ const fetchPeopleData = async () => {
   let json = await response.json();
   console.log(json);
   for (let info of json.data) {
-    // console.log(info.firstname);
-    // console.log(info.lastname);
-    // console.log(info.email);
-    // console.log(info.birthday);
     const card = document.createElement("div");
     card.className = "card";
     const container = document.createElement("div");
@@ -45,10 +37,6 @@ submit.addEventListener("click", (event) => {
 
 
 // GET PLACES FUNCTION
-// const body2 = document.querySelector(".main-container");
-// const main2 = document.createElement("main");
-// main2.className = "main2";
-// body2.append(main2);
 
 const fetchPlacesData = async () => {
   const body2 = document.querySelector(".main-container");
@@ -60,8 +48,6 @@ const fetchPlacesData = async () => {
   let json = await response.json();
   console.log(json);
   for (let info of json.data) {
-    // console.log(info.latitude);
-    // console.log(info.longitude);
     const card = document.createElement("div");
     card.className = "card";
     const container = document.createElement("div");
