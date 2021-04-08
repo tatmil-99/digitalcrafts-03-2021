@@ -30,7 +30,7 @@ const fetchPeopleData = async () => {
   return json;
 };
 
-const submit = document.querySelector(".get-ppl-btn");
+let submit = document.querySelector(".get-people-btn");
 submit.addEventListener("click", (event) => {
   fetchPeopleData().catch(alert);
 });
@@ -77,7 +77,7 @@ const fetchPlacesData = async () => {
 };
 
 
-const submit2 = document.querySelector(".get-places-btn");
-submit2.addEventListener("click", (event) => {
+submit = document.querySelector(".get-places-btn");
+submit.addEventListener("click", (event) => {
   fetchPlacesData().catch(alert);
 });
