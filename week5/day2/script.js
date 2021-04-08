@@ -1,14 +1,14 @@
 // GET PEOPLE FUNCTION
 
 const fetchPeopleData = async () => {
+  let response = await fetch("https://fakerapi.it/api/v1/persons?_quantity=30");
+  let json = await response.json();
+  
   const body = document.querySelector(".main-container");
   const main = document.createElement("main");
   main.className = "main";
   body.append(main);
 
-  let response = await fetch("https://fakerapi.it/api/v1/persons?_quantity=30");
-  let json = await response.json();
-  console.log(json);
   for (let info of json.data) {
     const card = document.createElement("div");
     card.className = "card";
@@ -32,21 +32,21 @@ const fetchPeopleData = async () => {
 
 const submit = document.querySelector(".get-ppl-btn");
 submit.addEventListener("click", (event) => {
-  fetchPeopleData();
+  fetchPeopleData().catch(alert);
 });
 
 
 // GET PLACES FUNCTION
 
 const fetchPlacesData = async () => {
+  let response = await fetch("https://fakerapi.it/api/v1/places?_quantity=30");
+  let json = await response.json();
+
   const body2 = document.querySelector(".main-container");
   const main2 = document.createElement("main");
   main2.className = "main2";
   body2.append(main2);
-
-  let response = await fetch("https://fakerapi.it/api/v1/places?_quantity=30");
-  let json = await response.json();
-  console.log(json);
+  
   for (let info of json.data) {
     const card = document.createElement("div");
     card.className = "card";
@@ -79,5 +79,5 @@ const fetchPlacesData = async () => {
 
 const submit2 = document.querySelector(".get-places-btn");
 submit2.addEventListener("click", (event) => {
-  fetchPlacesData();
+  fetchPlacesData().catch(alert);
 });
