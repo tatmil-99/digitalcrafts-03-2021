@@ -1,0 +1,23 @@
+.container {
+  margin: 0 auto;
+  max-width: 100px;
+  text-align: center;
+}
+
+@keyframes bounce {
+  to {
+    top: 0;
+  }
+  from {
+    top: 100px;
+  }
+}
+
+.ball {
+  width: 100px;
+  height: 100px;
+  position: relative;
+  background-color: red;
+  border-radius: 50%;
+  animation: bounce 1s ease-out 0s 10 alternate-reverse;
+}
