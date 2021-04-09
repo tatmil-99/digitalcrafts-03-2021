@@ -81,3 +81,5 @@ submit = document.querySelector(".get-places-btn");
 submit.addEventListener("click", (event) => {
   fetchPlacesData().catch(alert);
 });
+
+// single func version
