@@ -1,11 +1,19 @@
+// installed express and now want to use it in our application.
 const express = require("express");
-const app = express();
+// invoking express. An instance is now up and running.
+const app = express(); 
+// number used to identify transaction over network.
 const port = 3000;
 
-const { readFile } = require("fs");
+// const { readFile } = require("fs");
 
 app.use(express.json());
 
+// routes
+// http methods
+// get requires url path and callback function.
+// function fires only if conditions are met.
+// sends response to request location.
 app.get("/", (req, res) => {
   const message = "message 1";
   res.send(message);
@@ -27,6 +35,7 @@ app.get("/faq", (req, res) => {
   res.send(message);
 });
 
+// app(instance of express server). Listening for access to port.
 app.listen(port, () => {
   console.log(`Your server is listening on ${port}`);
 });
