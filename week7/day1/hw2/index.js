@@ -7,9 +7,11 @@ const express = require("express");
 const app = express();
 
 const { readFile } = require("fs"); 
+const { pathToFileURL } = require("url");
 app.use(express.json());
 
 const server = http.createServer(app);
+
 
 app.get("/", (req, res) => {
   const message = "This is main"
@@ -31,6 +33,9 @@ app.get("*", (req, res) => {
     res.send(html);
   });
 });
+
+// can't link css 
+app.use(express.static("public"))
 
 server.listen(port, hostname, () => {
   console.log(`server running at http://${hostname}:${port}/`);
