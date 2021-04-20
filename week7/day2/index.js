@@ -7,6 +7,7 @@ const port = 3000;
 
 // const { readFile } = require("fs");
 
+// middleware. convert req using express to json before sending a res back.
 app.use(express.json());
 
 // routes
