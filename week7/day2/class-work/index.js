@@ -24,8 +24,9 @@ app.get("/contact", (req, res) => {
 });
 
 app.post("/stuff", (req, res) => {
-  const message = "Stuff";
-  res.render(message);
+  const { stuff } = req.body;
+  const message = `Just some random ${stuff}`;
+  res.send(message);
 });
 
 app.get("*", (req, res) => {
