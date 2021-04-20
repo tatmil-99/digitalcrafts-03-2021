@@ -1,16 +1,13 @@
-const http = require("http");
-
-const hostname = "127.0.0.1";
-const port = 3000;
-
 const express = require("express");
 const app = express();
 
-const { readFile } = require("fs"); 
-const { pathToFileURL } = require("url");
-app.use(express.json());
+const port = 3000;
 
-const server = http.createServer(app);
+const { readFile } = require("fs"); 
+
+app.use(express.json());
+app.use(express.urlencoded({ extended: true }));
+app.use(express.static("./public"));
 
 
 app.get("/", (req, res) => {
@@ -34,9 +31,6 @@ app.get("*", (req, res) => {
   });
 });
 
-// can't link css 
-app.use(express.static("public"))
-
-server.listen(port, hostname, () => {
-  console.log(`server running at http://${hostname}:${port}/`);
+app.listen(port, () => {
+  console.log(`server running at ${port}`);
 });
