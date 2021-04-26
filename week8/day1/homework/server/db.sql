@@ -1,0 +1,2 @@
+CREATE DATABASE todo_list3;
+CREATE TABLE todo_3(id SERIAL PRIMARY KEY, description TEXT);
