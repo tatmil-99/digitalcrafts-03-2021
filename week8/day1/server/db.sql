@@ -1,0 +1,3 @@
+CREATE DATABASE shopping_list;
+
+CREATE TABLE groceries(id SERIAL PRIMARY KEY, item TEXT, qty INTEGER);
