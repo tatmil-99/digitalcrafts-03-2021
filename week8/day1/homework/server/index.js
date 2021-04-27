@@ -20,13 +20,24 @@ app.post("/", async (req, res) => {
     const { description } = req.body;
     const newToDoInDB = await pool.query(
       "INSERT INTO todo_3 (description) VALUES($1)", [description]);
+    // res.render("todo");
     res.json(newToDoInDB);
   } catch(err) {
     console.log(err.message);
   }
 });
 
-
+app.get("/get_todo/:id", async (req, res) => {
+  try {
+    const { id } = req.params;
+    const readToDo = await pool.query(
+      "SELECT * from todo_3 WHERE todo_3_id = ($1)", [id]
+    );
+      res.json(readToDo.rows[0].description);
+  } catch(err) {
+    console.log(err.message);
+  }
+});
 
 app.listen(port, () => {
   console.log(`listening on ${port}`);
