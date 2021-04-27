@@ -15,6 +15,17 @@ app.get("/", (req, res) => {
   res.render("home");
 });
 
+app.post("/", async (req, res) => {
+  try {
+    const { description } = req.body;
+    const newToDoInDB = await pool.query(
+      "INSERT INTO todo_3 (description) VALUES($1)", [description]);
+    res.json(newToDoInDB);
+  } catch(err) {
+    console.log(err.message);
+  }
+});
+
 
 
 app.listen(port, () => {
