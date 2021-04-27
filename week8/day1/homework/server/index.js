@@ -8,11 +8,11 @@ const templateEngine = require("express-es6-template-engine");
 app.use(express.json());
 app.use(cors());
 app.engine("html", templateEngine);
-app.set("views", "../client");
+app.set("views", "../templates");
 app.set("view engine", "html");
 
 app.get("/", (req, res) => {
-  res.send("success");
+  res.render("home");
 });
 
 
