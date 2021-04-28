@@ -12,13 +12,13 @@
   
   <label class="todo-val" for="input">Enter ToDo:</label>
   <input type="text" id="input">
-  <button class="btn">Click</button>
+  <button class="btn" onclick="sendDataToDB()">Click</button>
 </body>
 <script>
     const sendDataToDB = async ()=> {
         const input = document.querySelector("#input").value
         const data = {
-            todo:input,
+            description:input,
         }
         const sendTheData = await fetch("http://localhost:3001/sendToDo", 
         {
@@ -31,10 +31,10 @@
         
 
     }
-  const btn = document.querySelector(".btn");
+  // const btn = document.querySelector(".btn");
 
-  btn.addEventListener("click", event => {
-    sendDataToDB();
-  })
+  // btn.addEventListener("click", event => {
+  //   sendDataToDB();
+  // })
 </script>
 </html>

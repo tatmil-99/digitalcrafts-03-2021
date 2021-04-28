@@ -22,7 +22,6 @@ app.post("/sendToDo", async (req, res) => {
       "INSERT INTO todo_3 (description) VALUES($1)", [description]);
       res.status(200).send("sent");
   } catch(err) {
-    res.status(400);
     console.log(err.message);
   }
 });
