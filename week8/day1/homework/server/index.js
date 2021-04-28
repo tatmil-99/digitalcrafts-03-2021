@@ -20,7 +20,7 @@ app.post("/sendToDo", async (req, res) => {
     const { description } = req.body;
     const newToDoInDB = await pool.query(
       "INSERT INTO todo_3 (description) VALUES($1)", [description]);
-      res.status(200).send("sent");
+    res.status(200).send("It works");
   } catch(err) {
     console.log(err.message);
   }
