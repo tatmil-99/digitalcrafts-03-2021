@@ -9,26 +9,32 @@
 
 <body>
   <h1>Welcome to Express Template</h1>
-  <form action="http://localhost:3001/" method="post">
-    <label for="input">Enter ToDo:</label>
-    <input type="text" id="input">
-    <input type="submit" value="Submit">
-  </form>
+  
+  <label class="todo-val" for="input">Enter ToDo:</label>
+  <input type="text" id="input">
+  <button class="btn">Click</button>
 </body>
-<!-- <script >
-  const sendTodo = (e) => {
-  
-      const datatodb = await fetch("http://localhost:3001/",
-      {
-          method: 'POST', // *GET, POST, PUT, DELETE, etc.
-          headers: {
-              'Content-Type': 'application/json'
-          },
-          body:{}
-      })
-  }
-  
-  
-  </script> -->
-  
+<script>
+    const sendDataToDB = async ()=> {
+        const input = document.querySelector("#input").value
+        const data = {
+            todo:input,
+        }
+        const sendTheData = await fetch("http://localhost:3001/sendToDo", 
+        {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            body:  JSON.stringify(data)
+        })
+        
+
+    }
+  const btn = document.querySelector(".btn");
+
+  btn.addEventListener("click", event => {
+    sendDataToDB();
+  })
+</script>
 </html>
