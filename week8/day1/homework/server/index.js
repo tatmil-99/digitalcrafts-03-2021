@@ -26,20 +26,13 @@ app.post("/sendToDo", async (req, res) => {
   }
 });
 
-app.get("/get_todo/:id", async (req, res) => {
-  try {
-    const { id } = req.params;
-    const readToDo = await pool.query(
-      "SELECT * from todo_3 WHERE todo_3_id = ($1)", [id]
-    );
-      res.render("get_todo", {
-        locals: {
-          todo: readToDo,
-        }
-      });
-  } catch(err) {
-    console.log(err.message);
-  }
+app.get("/get_todo", async (req, res) => {
+  const grabData = await pool.query("SELECT * FROM todo_3");
+  res.render("todo", {
+    locals: {
+      todos: grabData.rows,
+    },
+  });
 });
 
 app.listen(port, () => {

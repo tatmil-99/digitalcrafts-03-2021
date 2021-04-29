@@ -8,5 +8,13 @@
 </head>
 <body>
   <h1>ToDo List:</h1>
+  <ul>
+    ${todos.map(todo => 
+      `
+      <h3>ToDo Item #${todo.id}</h3>
+      <li>${todo.description}</li>
+      `
+      ).join("")}
+  </ul>
 </body>
 </html>
