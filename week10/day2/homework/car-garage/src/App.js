@@ -1,0 +1,14 @@
+// import logo from './logo.svg';
+import './App.css';
+import React, { Component } from 'react'
+import House from './components/House'
+
+export default class App extends Component {
+  render() {
+    return (
+      <div>
+        <House/>
+      </div>
+    )
+  }
+}
