@@ -14,12 +14,12 @@ class Garage extends Component {
         motorcycles: [
           {
             American: [{
-              name: "Indian"
+              americanName: "Indian"
             }]
           },
           {
             Foreign: [{
-              name: "Honda"
+              foreignName: "Honda"
             }]
           }
         ]
@@ -29,14 +29,17 @@ class Garage extends Component {
 }
 
   render() {
-    const {name} = this.state.vehicles[0].motorcycles[0].American[0]
-    
+    const {americanName} = this.state.vehicles[0].motorcycles[0].American[0]
+    const {foreignName} = this.state.vehicles[0].motorcycles[1].Foreign[0]
+
+
     return (
       <div>
         <h2>Garage:</h2>
         <h4>Motorcycles:</h4>
         <ul>
-          <li>{name}</li>
+          <li>{americanName}</li>
+          <li>{foreignName}</li>
         </ul>
       </div>
     )
