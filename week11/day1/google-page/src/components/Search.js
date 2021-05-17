@@ -5,9 +5,11 @@ export default class Search extends Component {
     return (
       <div>
         <form>
-          <input></input><br/>
-          <button>Google Search</button>
-          <button>I'm Feeling Lucky</button>
+          <input className="search-input"></input><br/>
+            <div className="buttons">
+              <button className="left-btn">Google Search</button>
+              <button className="right-btn">I'm Feeling Lucky</button>
+            </div>
         </form>
       </div>
     )

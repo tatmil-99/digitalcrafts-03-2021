@@ -8,10 +8,10 @@ export default class Nav extends Component {
   render() {
     return (
       <div className="nav-elements">
-        <span>About</span>
-        <span>Store</span>
-        <span>Gmail</span>
-        <span>Images</span>
+        <span className="outer-links">About</span>
+        <span className="inner-link-left">Store</span>
+        <span className="inner-link-right">Gmail</span>
+        <span className="outer-links">Images</span>
       </div>
     )
   }
