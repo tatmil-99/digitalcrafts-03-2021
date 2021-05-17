@@ -7,8 +7,11 @@ export default class Nav extends Component {
 
   render() {
     return (
-      <div>
-        
+      <div className="nav-elements">
+        <span>About</span>
+        <span>Store</span>
+        <span>Gmail</span>
+        <span>Images</span>
       </div>
     )
   }
