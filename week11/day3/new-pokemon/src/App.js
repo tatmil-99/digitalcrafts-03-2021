@@ -1,9 +1,12 @@
 import './App.css';
+import CardContainer from "./components/CardContainer.jsx";
+import { data } from "./data/data";
 
 function App() {
   return (
     <div className="App">
-      
+      <h1>Pokemon Search Page</h1>
+      <CardContainer pokemonData={data} />
     </div>
   );
 }
