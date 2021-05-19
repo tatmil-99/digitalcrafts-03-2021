@@ -5,8 +5,7 @@
   flex-wrap: wrap;
 }
 .pokemon-card {
-  background-image: url("https://i.pinimg.com/564x/64/2d/df/642ddf0b07b51838d84b6603b6e3022f.jpg");
-  background-color: #e7f2f8;
+  background-color: #e3cff4;
   background-size: 200px 20rem;
   height: 20rem;
   width: 12.52rem;
