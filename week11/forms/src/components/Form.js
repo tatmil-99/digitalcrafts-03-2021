@@ -6,8 +6,9 @@ export default class Form extends Component {
     firstName: "",
     lastName: "",
     streetAddress: "", 
-    postalCode: "",
+    apartment: "",
     city: "", 
+    postalCode: "",
     state: "", 
     county: "", 
     phone: "",
@@ -20,18 +21,37 @@ export default class Form extends Component {
     })
   }
 
+  handleSubmit = (event) => {
+    const {
+      firstName,
+      lastName,
+      streetAddress,
+      apartment,
+      city,
+      postalCode,
+      state,
+      county,
+      phone
+    } = this.state
+    event.preventDefault()
+    const formsubmission = {
+      username: firstName + lastName,
+      address: `${streetAddress} ${apartment} `
+    }
+  }
+
   render() {
     return (
       <div>
         <h1 className="shipping-form-header">Forms React</h1>
         <div className="shipping-form-container">
-          <form className="shipping-form">
+          <form className="shipping-form" onSubmit={this.handleSubmit}>
             <input name="firstName" className="input-text" type="text" placeholder="First name" value={this.state.firstName} onChange={this.handleInputFormValues}
             ></input>
 
             <input name="lastName" className="input-text" type="text" placeholder="Last name" value={this.state.lastName} onChange={this.handleInputFormValues}></input>
 
-            <input name="streetAddresss" className="input-text-street" type="text" placeholder="Street Address" value={this.state.streetAddress} onChange={this.handleInputFormValues}></input>
+            <input name="streetAddress" className="input-text-street" type="text" placeholder="Street Address" value={this.state.streetAddress} onChange={this.handleInputFormValues}></input>
 
             <input name="apartment" className="input-text-apt" type="text" placeholder="Apt, suite" value={this.state.apartment} onChange={this.handleInputFormValues}></input>
 
@@ -44,7 +64,7 @@ export default class Form extends Component {
             <input name="county" className="input-text" type="text" placeholder="County" value={this.state.county} onChange={this.handleInputFormValues}></input>
 
             <input name="phone" className="input-text" type="text" placeholder="Phone" value={this.state.phone} onChange={this.handleInputFormValues}></input>
-            
+
             <input className="shipping-input-btn" type="submit" placeholder="Submit"></input>
           </form>
         </div>
