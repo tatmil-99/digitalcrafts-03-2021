@@ -6,6 +6,18 @@ import {
 } from "./styledComponents/SignUpFormStyles";
 
 const SignUpForm = (props) => {
+  const [ form, setForm ] = useState({
+    firstName: '',
+    lastName: '',
+    email: '',
+    password: "",
+    retypedPassword: ''
+  })
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+  }
+
   return (
     <div className="sign-up-form-container">
       <h1>Create Account</h1>
@@ -20,7 +32,8 @@ const SignUpForm = (props) => {
         <SignUpFormInput type="email" placeholder="Email" />
         <SignUpFormInput type="password" placeholder="Password" />
         <SignUpFormInput type="password" placeholder="Re-Type Password" />
-        <SignUpButton>Sign Up</SignUpButton>
+
+        <SignUpButton >Sign Up</SignUpButton>
       </SignUpFormDiv>
     </div>
   );
