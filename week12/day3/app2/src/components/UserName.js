@@ -1,5 +1,6 @@
 import React from 'react';
 import { useSelector, useDispatch } from "react-redux";
+import { changeNameFunction } from "../components/actions/username-actions"
 
 const UserName = () => {
   const dispatch = useDispatch();
@@ -7,7 +8,7 @@ const UserName = () => {
   return (
     <div>
       <h1>Username: {username}</h1>
-      <button onClick={() => dispatch({type: "CHANGE_NAME"})}>Change Name</button>
+      <button onClick={() => changeNameFunction(dispatch)}>Change Name</button>
     </div>
   )
 }
