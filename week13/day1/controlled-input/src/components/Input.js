@@ -12,10 +12,10 @@ const Input = () => {
       <h1>Sign In</h1>
       <form>
         <label>Username:</label>
-        <input type="text" onChange={(e) => console.log(e.target.value)}></input>
+        <input type="text" onChange={(e) => updateUsername(dispatch, e.target.value)}></input>
         <br></br>
         <label>Password:</label>
-        <input type="password"></input>
+        <input type="password" onChange={(e) => updateUserPassword(dispatch, e.target.value)}></input>
         <br></br>
         <button>Submit</button>
       </form>

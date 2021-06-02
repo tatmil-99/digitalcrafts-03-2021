@@ -7,8 +7,7 @@ const initialState = {
 const username = (state = initialState, action) => {
   switch (action.type) {
     case UPDATE_USERNAME:
-      console.log(initialState)
-      return {...state, username: state.username};
+      return {username: state.username = action.payload};
     default:
       return state;
   }

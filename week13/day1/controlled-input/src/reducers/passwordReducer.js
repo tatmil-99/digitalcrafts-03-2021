@@ -7,7 +7,7 @@ const initialState = {
 const password = (state = initialState, action) => {
   switch (action.type) {
     case UPDATE_PASSWORD:
-      return {...state, username: state.username};
+      return {password: state.password = action.payload};
     default:
       return state;
   }
